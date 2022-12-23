@@ -64,7 +64,7 @@ int menuLuaChonDangNhapHayDangKi()
     cout << "Dang ki [1]" << endl;
     cout << "Dang nhap [2]" << endl;
     cout << "Thoat chuong trinh [0]" << endl;
-    cout << "------------------------------------" << endl;
+    cout << "-------------------------------------------------" << endl;
     cout << ">>> ";
     cin >> opt;
 
@@ -78,7 +78,7 @@ int menuLuaChonDangNhapHayDangKi()
         cout << "---------------QUAN LY NHAN VIEN-----------------" << endl;
         cout << "Dang ki [1]" << endl;
         cout << "Dang nhap [2]" << endl;
-        cout << "------------------------------------" << endl;
+        cout << "-------------------------------------------------" << endl;
         cout << ">>> ";
         cin >> opt;
     }

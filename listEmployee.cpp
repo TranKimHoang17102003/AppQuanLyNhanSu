@@ -21,6 +21,8 @@ void listEmployee::nhapDanhSachNhanVien(int idAdmin)
 	cin.ignore();
 	for (int i = 0; i < n; i++)
 	{
+		system("cls");
+		cout << "Nhap nhan vien " << i + 1 << ": "<< endl;
 		Employee e = this->data.nhap();
 		string temp=e.getMaNhanVien();
 		while (kiemTraTrungID(temp))
@@ -41,6 +43,7 @@ void listEmployee::nhapDanhSachNhanVien(int idAdmin)
 
 		this->ghiTaiKhoanVaoFileNhanVienH("QLTaiKhoanMatKhauNhanVien.txt", tk, e.getIdAdmin());
 	}
+	system("cls");
 }
 
 void listEmployee::ghiFile(string tenFile)
@@ -306,8 +309,9 @@ void listEmployee::suaNhanVienIndex(int pos)
 	int lc = -1;
 	while (lc != 0)
 	{
+		system("cls");
 		cout << "Ban muon sua thong tin gi: " << endl;
-		cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+		cout << "+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+" << endl;
 		p->data.xuat();
 		cout << "1. Sua ma nhan vien." << endl;
 		cout << "2. Sua ho ten" << endl;
@@ -407,6 +411,7 @@ void listEmployee::suaNhanVienIndex(int pos)
 			p->data.setSoCMND(soCMND1);
 		}
 	}
+	system("cls");
 }
 
 void listEmployee::sapXepTheoTen()
@@ -425,7 +430,7 @@ void listEmployee::sapXepTheoTen()
 		}
 		p = p->next;
 	}
-	cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+	cout << "+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+" << endl;
 	this->xuatTrenXuong();
 }
 
@@ -445,7 +450,7 @@ void listEmployee::sapXepTheoMaNhanVien()
 		}
 		p = p->next;
 	}
-	cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+	cout << "+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+" << endl;
 	this->xuatTrenXuong();
 }
 
@@ -472,7 +477,7 @@ void listEmployee::timPhanTuTheoTen(string s)
 		string temp = tachTenNguoi(p->data.getHoTen());
 		if (temp == s)
 		{
-			cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+			cout << "+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+" << endl;
 			p->data.xuat();
 			break;
 			return;
@@ -491,7 +496,7 @@ void listEmployee::timPhanTuTheoIdNhanVien(int idNhanVien)
 	{
 		if (p->data.getIdNhanVien() == idNhanVien)
 		{
-			cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+			cout << "+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+" << endl;
 			p->data.xuat();
 			return;
 		}

@@ -13,7 +13,8 @@ void menuAdmin(int idAdmin)
 
 	do
 	{
-		cout << endl << "______________Menu Danh Cho Admin______________" << endl;
+		cout << endl;
+		cout << "+______________Menu Danh Cho Admin______________+" << endl;
 		cout << "1. Xem danh sach nhan vien" << endl;
 		cout << "2. Them nhan vien" << endl; //tu dong tao 1 tai khoan cho nhan vien vao file do lu�n: tk: id Nhan Vien, mk: id cong ty
 		cout << "3. Sua mot nhan vien theo vi tri pos" << endl;
@@ -26,7 +27,7 @@ void menuAdmin(int idAdmin)
 		cout << "10. Sap xep nhan vien theo ma nhan vien"<<endl;
 		cout << "-1. Dang xuat" << endl;
 		cout << "0. Thoat chuong trinh" << endl;
-		cout << "" << endl;
+		cout << "+-----------------------------------------------+" << endl;
 
 		cout << "Nhap lua chon: ";
 		cin >> lc;
@@ -38,23 +39,24 @@ void menuAdmin(int idAdmin)
 		}
 		else if (lc == 1)
 		{
+			system("cls");
 			cout << left;
-			cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+			cout << "+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+" << endl;
 			cout << setw(2);
 			cout << "| ";
-			cout << setw(14);
-			cout << "Ma nhan vien";
+			cout << setw(6);
+			cout << "MaNV";
 			cout << setw(2);
 			cout << "| ";
 			cout << setw(18);
 			cout << "Ho ten";
 			cout << setw(2);
 			cout << "| ";
-			cout << setw(12);
-			cout << "Ma chuc vu";
+			cout << setw(6);
+			cout << "MaCV";
 			cout << setw(2);
 			cout << "| ";
-			cout << setw(12);
+			cout << setw(10);
 			cout << "Gioi tinh";
 			cout << setw(2);
 			cout << "| ";
@@ -68,12 +70,12 @@ void menuAdmin(int idAdmin)
 			cout << "| ";
 
 			//Qua tai toan tu xuat
-			cout << setw(15);
+			cout << setw(12);
 			cout << "Ngay sinh";
 			cout << setw(2);
 			cout << "| ";
-			cout << setw(15);
-			cout << "Ngay vao lam";
+			cout << setw(14);
+			cout << "NgayVaoLam";
 			cout << setw(2);
 			cout << "| ";
 			cout << setw(15);
@@ -84,16 +86,38 @@ void menuAdmin(int idAdmin)
 			cout << "So CMND";
 			cout << setw(2);
 			cout << "|";
+
+			cout << setw(11);
+			cout << "LuongCoBan";
+			cout << setw(2);
+			cout << "|";
+
+			cout << setw(10);
+			cout << "HeSoLuong";
+			cout << setw(2);
+			cout << "|";
+
+			cout << setw(7);
+			cout << "PhuCap";
+			cout << setw(2);
+			cout << "|";
+
+			cout << setw(11);
+			cout << "Luong";
+			cout << setw(2);
+			cout << "|";
 			cout << endl;
-			cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+			cout << "+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+" << endl;
 			l.xuatTrenXuong();
 		}
 		else if (lc == 2)
 		{
+			system("cls");
 			l.nhapDanhSachNhanVien(idAdmin);
 		}
 		else if (lc == 3)
 		{
+			system("cls");
 			int pos;
 			cout << "Nhap vi tri muon sua: ";
 			cin >> pos;
@@ -101,16 +125,17 @@ void menuAdmin(int idAdmin)
 		}
 		else if (lc == 4)
 		{
+			system("cls");
 			int pos;
 			cout << "Nhap vi tri muon xoa: ";
 			cin >> pos;
 			int idNVXoa;
 			l.xoaNhanVienIndex(pos, idNVXoa);
-			cout << "Id nhan vien da bi xoa la: " << idNVXoa<<endl;
 			setIdAdminTrongTKNV(idNVXoa, 0);
 		}
 		else if (lc == 5)
 		{
+			system("cls");
 			cout << "So luong nhan vien: " << l.getSize();
 		}
 		else if (lc == 6)
@@ -120,10 +145,12 @@ void menuAdmin(int idAdmin)
 		else if (lc == -1)
 		{
 			l.ghiFile(path);
+			system("cls");
 			return;
 		}
 		else if (lc == 7)
 		{
+			system("cls");
 			int n;
 			cout << "Nhap Id nhan vien: ";
 			cin >> n;
@@ -131,6 +158,7 @@ void menuAdmin(int idAdmin)
 		}
 		else if (lc == 8)
 		{
+			system("cls");
 			string s;
 			cout << "Nhap ten nhan vien: ";
 			cin >> s;
@@ -138,10 +166,12 @@ void menuAdmin(int idAdmin)
 		}
 		else if (lc == 9)
 		{
+			system("cls");
 			l.sapXepTheoTen();
 		}
 		else if (lc == 10) 
 		{
+			system("cls");
 			l.sapXepTheoMaNhanVien();
 		}
 
@@ -203,7 +233,7 @@ void menuNhanVien(int idAdmin, int idNhanVien)
 		else if (lc == 1)
 		{
 			cout << left;
-			cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+			cout << "+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+" << endl;
 			cout << setw(2);
 			cout << "| ";
 			cout << setw(14);
@@ -249,7 +279,7 @@ void menuNhanVien(int idAdmin, int idNhanVien)
 			cout << setw(2);
 			cout << "|";
 			cout << endl;
-			cout << "---------------------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+			cout << "+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+" << endl;
 			l.timPhanTuTheoIdNhanVien(idNhanVien);
 		}
 		else if (lc == 2)
@@ -277,32 +307,38 @@ int main()
 		int lc = menuLuaChonDangNhapHayDangKi();
 
 		if (lc == 1) {
+			system("cls");
 			lc = menuDangKi();
 			if (lc == 1)
 			{
+				system("cls");
 				dangKiNhanVien();
 				goto manHinhDangNhap;
 			}
 			else {
+				system("cls");
 				dangKiAdmin();
 				goto manHinhDangNhap;
 			}
 		}
 		else
 		{
+			system("cls");
 			lc = menuDangNhap();
+			system("cls");
 			if (lc == 1)
 			{
 				int thisIdAdMin=0, thisIdNhanVien=0;
 
 				if (dangNhapNhanVien(thisIdAdMin, thisIdNhanVien))
 				{
-					cout << "Dang nhap thanh cong"<<endl;
+					system("cls");
 
 					menuNhanVien(thisIdAdMin, thisIdNhanVien);
 					goto manHinhDangNhap;
 				}
 				else {
+					system("cls");
 					cout << "Dang nhap that bai" << endl;
 					goto manHinhDangNhap;
 				}
@@ -314,7 +350,7 @@ int main()
 
 				if (dangNhapAdmin(thisIdAdMin))
 				{
-					cout << "Dang nhap thanh cong" << endl;
+					system("cls");
 					menuAdmin(thisIdAdMin);
 					goto manHinhDangNhap;
 				}

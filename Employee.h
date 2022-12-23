@@ -19,7 +19,7 @@ public:
 	string soCMND;
 
 	//them 
-	double luong;
+	int luong;
 	int luongCoBan;
 	double heSoLuong;
 	double phuCap;
@@ -40,7 +40,7 @@ public:
 	int getSoDienThoai() { return soDienThoai; };
 	string getSoCMND() { return soCMND; };
 
-	double getLuong() { return luong; };
+	int getLuong() { return luong; };
 	int getLuongCoBan() { return luongCoBan; };
 	double getHeSoLuong() { return heSoLuong; };
 	double getPhuCap() { return phuCap; };

@@ -110,7 +110,7 @@ void Employee::setPhuCap()
 void Employee::setLuong()
 {
 	double temp = (double)this->luongCoBan * this->heSoLuong;
-	this->luong = temp  + this->phuCap*temp;
+	this->luong = round(temp  + this->phuCap*temp);
 }
 void Employee::setLuongCoBan(int s)
 {
@@ -199,9 +199,10 @@ void Employee::xuat()
 {
 	cout << left;
 
+
 	cout << setw(2);
 	cout << "| ";
-	cout << setw(14);
+	cout << setw(6);
 	cout << this->maNhanVien;
 	cout << setw(2);
 	cout << "| ";
@@ -209,11 +210,11 @@ void Employee::xuat()
 	cout << this->hoTen;
 	cout << setw(2);
 	cout << "| ";
-	cout << setw(12);
+	cout << setw(6);
 	cout << this->maChucVu;
 	cout << setw(2);
 	cout << "| ";
-	cout << setw(12);
+	cout << setw(10);
 	cout << this->gioiTinh;
 	cout << setw(2);
 	cout << "| ";
@@ -227,11 +228,11 @@ void Employee::xuat()
 	cout << "| ";
 
 	//Qua tai toan tu xuat
-	cout << setw(15);
+	cout << setw(12);
 	cout << this->ngaySinh;
 	cout << setw(2);
 	cout << "| ";
-	cout << setw(15);
+	cout << setw(14);
 	cout << this->ngayVaoLam;
 	cout << setw(2);
 	cout << "| ";
@@ -244,7 +245,7 @@ void Employee::xuat()
 	cout << setw(2);
 	cout << "|";
 	//them
-	cout << setw(10);
+	cout << setw(11);
 	cout << this->luongCoBan;
 	cout << setw(2);
 	cout << "|";
@@ -252,15 +253,15 @@ void Employee::xuat()
 	cout << this->heSoLuong;
 	cout << setw(2);
 	cout << "|";
-	cout << setw(4);
+	cout << setw(7);
 	cout << this->phuCap;
 	cout << setw(2);
 	cout << "|";
-	cout << setw(10);
+	cout << setw(11);
 	cout << this->luong;
 	cout << setw(2);
 	cout << "|";
 	//them
 	cout << endl;
-	cout << "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------"<<endl;
+	cout << "+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+" << endl;
 }
